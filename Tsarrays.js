@@ -1,4 +1,3 @@
-"use strict";
 let numgrades = [];
 let lettergrades = [];
 numgrades = [1, 2, 3, 4,];

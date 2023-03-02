@@ -1,5 +1,5 @@
 enum Month {
-    Jan,
+    Jan = 1,
     Feb,
     Mar,
     Apr,
@@ -15,7 +15,7 @@ enum Month {
 
 function isSummer(month:Month) {
     let isSummer: boolean
-    //add monthname
+    let monthName: string = typeof month == 'string' ? month : Month[month]
     switch(month) {
         case Month.Jun:
         case Month.Jul:
@@ -25,7 +25,7 @@ function isSummer(month:Month) {
         default:
          isSummer = false    
     }
-    return isSummer
+    return `${monthName} is ${isSummer}!`
 }
 
 console.log(isSummer(Month.Jun))
